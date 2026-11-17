@@ -37,8 +37,9 @@ export async function POST(req: Request) {
   let userId: string | undefined;
   for (let page = 1; page <= 20 && !userId; page++) {
     const { data, error } = await admin.auth.admin.listUsers({ page, perPage: 1000 });
-    if (error || !data.users.length) break;
-    userId = data.users.find((u) => u.email?.toLowerCase() === email)?.id;
+    const users: any[] = (data as any)?.users ?? [];
+    if (error || !users.length) break;
+    userId = users.find((u) => u.email?.toLowerCase() === email)?.id;
   }
   if (!userId) {
     console.warn("Selar webhook: no account for", email);

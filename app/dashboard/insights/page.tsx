@@ -30,7 +30,7 @@ export default function Insights() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Workforce intelligence</h1>
+      <h1 className="text-2xl font-bold">Workforce Intelligence</h1>
       {org.plan === "free" && <p className="card text-sm">Attendance trends & insights are available on Starter and above.</p>}
       <button className="btn-primary" onClick={run} disabled={busy || org.plan === "free"}>{busy ? "Analysing…" : "Explain my workforce data"}</button>
       {stats && <div className="card overflow-x-auto"><table className="w-full text-sm"><thead className="text-left text-xs uppercase text-brand-800"><tr><th>Department</th><th>Headcount</th><th>Check-ins (30d)</th></tr></thead><tbody>{Object.entries(stats.byDepartment).map(([d, v]: any) => (<tr key={d} className="border-t border-brand-100"><td className="py-2">{d}</td><td>{v.headcount}</td><td>{v.checkins}</td></tr>))}</tbody></table></div>}

@@ -9,9 +9,15 @@ body { @apply bg-white text-ink antialiased; font-family: Inter, system-ui, sans
   .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition disabled:opacity-50; }
   .btn-primary { @apply btn bg-brand-500 text-white hover:bg-brand-600; }
   .btn-ghost { @apply btn bg-white border border-brand-200 text-ink hover:bg-brand-50; }
-  .card { @apply rounded-2xl border border-brand-100 bg-white p-5 shadow-sm; }
+  .card { @apply rounded-2xl bg-white p-5 shadow-sm; }
   .input { @apply w-full rounded-xl border border-brand-200 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100; }
   .label { @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-brand-800; }
+  .btn-accent { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-mint px-5 py-3 text-sm font-semibold text-sidebar transition hover:brightness-95 disabled:opacity-50; }
+  .btn-dark { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-sidebar px-5 py-3 text-sm font-semibold text-white transition hover:bg-black; }
+  .btn-outline { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-gray-50; }
+  .field { @apply w-full rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-sm outline-none placeholder:text-gray-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-100; }
+  .flabel { @apply mb-1.5 block text-xs font-medium text-ink; }
+  .panel { @apply rounded-2xl bg-white p-6 shadow-sm; }
   .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-600; }
 }
 .hero-bg { background: radial-gradient(1200px 500px at 50% -10%, #d1fae5 0%, #f6fffb 55%, #fff 100%); }

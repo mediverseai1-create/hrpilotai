@@ -15,7 +15,7 @@ const prompts: Record<string, (p: any) => string> = {
   briefing: (p) =>
     `Write a short, friendly morning HR briefing (max 90 words) from these numbers:\n${JSON.stringify(p.stats)}`,
   document: (p) =>
-    `Draft a professional HR ${p.type} for a manager to review. Use only the facts given; mark anything missing as [PLACEHOLDER]. Facts:\n${p.facts}\nEmployee records:\n${JSON.stringify(p.records ?? {})}`,
+    `Draft a professional HR ${p.type} in a ${p.tone || "formal"} tone for a manager to review. Use only the facts given; mark anything missing as [PLACEHOLDER]. Facts:\n${p.facts}\nEmployee records:\n${JSON.stringify(p.records ?? {})}`,
   assistant: (p) =>
     `Answer the question using ONLY the company knowledge below. If the answer is not there, say you don't have it in the uploaded documents.\n\nKNOWLEDGE:\n${p.knowledge}\n\nQUESTION: ${p.question}`,
 };
